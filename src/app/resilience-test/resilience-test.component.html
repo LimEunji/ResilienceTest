@@ -2,4 +2,29 @@
   회복탄력성 테스트
 </h1>
 
-<h4>회복탄력성은 마음의 근육입니다. 지금부터 당신의 회복 탄력성을 측정해보겠습니다!.</h4>
+<h2>회복탄력성은 마음의 근육입니다. 지금부터 당신의 회복 탄력성을 측정해보겠습니다!.</h2>
+
+<br>
+
+<p>성별
+<input type="radio" name="gender_info" value="man" checked="checked">남
+<input type="radio" name="gender_info" value="woman">여
+</p>
+
+<br>
+
+<p>
+  응답 방법: 각 문항을 읽은 후 점수에 해당하는 체크박스에 체크해주세요. <br><br>
+전혀 그렇지 않다 = 1 / 그렇지 않다 = 2 / 보통이다 = 3 / 어느 정도 그렇다 = 4 / 매우 그렇다 = 5 <br><br>
+문항은 총 {{QUESTIONS.length}}개 입니다. <br><br>
+</p>
+
+<ol>
+  <li *ngFor="let question of QUESTIONS; let idx = index">{{question}}
+    <input type="radio" name="{{ 'answer' + (idx + 1) }}" value="1">
+    <input type="radio" name="{{ 'answer' + (idx + 1) }}" value="2">
+    <input type="radio" name="{{ 'answer' + (idx + 1) }}" value="3">
+    <input type="radio" name="{{ 'answer' + (idx + 1) }}" value="4">
+    <input type="radio" name="{{ 'answer' + (idx + 1) }}" value="5">
+  </li>
+</ol>
